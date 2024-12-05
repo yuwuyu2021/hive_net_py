@@ -1,0 +1,112 @@
+# 开发环境配置模板
+# 继承自base.yml
+
+# 应用信息
+app_name: "{{ app_name | default('hive_dev') }}"
+
+# 网络配置
+network_host: "localhost"
+network_port: 8000
+network_max_connections: 100
+network_timeout: 60
+network_keep_alive: true
+
+# 日志配置
+log_level: "DEBUG"
+log_format: "%(asctime)s - %(name)s - %(levelname)s [%(filename)s:%(lineno)d] - %(message)s"
+log_max_size: 5242880  # 5MB
+log_backup_count: 3
+
+# 安全配置
+security_enable_ssl: false
+security_auth_required: false
+security_token_expire: 86400  # 24小时
+
+# 性能配置
+performance_thread_pool: 4
+performance_process_pool: 2
+performance_batch_size: 50
+performance_queue_size: 500
+performance_enable_compression: false
+
+# 存储配置
+storage_type: "sqlite"
+storage_path: "data/dev.db"
+storage_backup_enabled: true
+storage_backup_interval: 3600  # 1小时
+storage_max_backup_count: 3
+
+# 监控配置
+monitoring_enabled: true
+monitoring_interval: 30
+monitoring_metrics:
+  - cpu_usage
+  - memory_usage
+  - disk_usage
+monitoring_alert_enabled: true
+monitoring_threshold_cpu: 90
+monitoring_threshold_memory: 90
+monitoring_threshold_disk: 95
+monitoring_email_enabled: false
+monitoring_wechat_enabled: false
+
+# 开发配置
+development_debug: true
+development_mock_enabled: true
+development_profile_enabled: true
+
+# 额外的开发工具配置
+development_tools:
+  # 代码格式化
+  formatter:
+    enabled: true
+    max_line_length: 88
+    ignore_patterns:
+      - "*.pyc"
+      - "__pycache__"
+      - "*.egg-info"
+  
+  # 代码检查
+  linter:
+    enabled: true
+    max_complexity: 10
+    ignore_errors:
+      - "E203"
+      - "W503"
+  
+  # 测试配置
+  testing:
+    auto_test: true
+    coverage_threshold: 80
+    test_paths:
+      - "tests/"
+    exclude_paths:
+      - "tests/data"
+  
+  # 调试配置
+  debugger:
+    enabled: true
+    port: 5678
+    allow_remote: true
+  
+  # 热重载
+  hot_reload:
+    enabled: true
+    watch_paths:
+      - "hive_net_py/"
+    ignore_patterns:
+      - "*.pyc"
+      - "__pycache__"
+  
+  # 性能分析
+  profiler:
+    enabled: true
+    output_dir: "profiles/"
+    max_depth: 30
+  
+  # 文档生成
+  documentation:
+    enabled: true
+    output_dir: "docs/"
+    format: "html"
+    include_private: true 

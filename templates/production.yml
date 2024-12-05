@@ -1,0 +1,169 @@
+# 生产环境配置模板
+# 继承自base.yml
+
+# 应用信息
+app_name: "{{ app_name | default('hive') }}"
+
+# 网络配置
+network_host: "0.0.0.0"  # 监听所有网络接口
+network_port: 80
+network_max_connections: 10000
+network_timeout: 30
+network_keep_alive: true
+
+# 日志配置
+log_level: "INFO"
+log_format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+log_max_size: 104857600  # 100MB
+log_backup_count: 30
+
+# 安全配置
+security_enable_ssl: true
+security_cert_file: "/etc/ssl/certs/hive.crt"
+security_key_file: "/etc/ssl/private/hive.key"
+security_auth_required: true
+security_token_expire: 3600  # 1小时
+
+# 性能配置
+performance_thread_pool: 32
+performance_process_pool: 8
+performance_batch_size: 1000
+performance_queue_size: 10000
+performance_enable_compression: true
+
+# 存储配置
+storage_type: "postgresql"
+storage_path: "postgresql://user:pass@localhost:5432/hive"
+storage_backup_enabled: true
+storage_backup_interval: 86400  # 24小时
+storage_max_backup_count: 30
+
+# 监控配置
+monitoring_enabled: true
+monitoring_interval: 60
+monitoring_metrics:
+  - cpu_usage
+  - memory_usage
+  - disk_usage
+  - network_io
+  - connection_count
+  - request_count
+  - response_time
+  - error_rate
+  - queue_size
+monitoring_alert_enabled: true
+monitoring_threshold_cpu: 80
+monitoring_threshold_memory: 80
+monitoring_threshold_disk: 90
+monitoring_email_enabled: true
+monitoring_email_recipients:
+  - "admin@example.com"
+  - "ops@example.com"
+monitoring_wechat_enabled: true
+monitoring_wechat_webhook: "{{ monitoring_wechat_webhook }}"
+
+# 开发配置
+development_debug: false
+development_mock_enabled: false
+development_profile_enabled: false
+
+# 生产环境特定配置
+production:
+  # 负载均衡
+  load_balancer:
+    enabled: true
+    algorithm: "round_robin"
+    health_check:
+      interval: 30
+      timeout: 5
+      healthy_threshold: 2
+      unhealthy_threshold: 3
+  
+  # 缓存
+  cache:
+    enabled: true
+    type: "redis"
+    url: "redis://localhost:6379/0"
+    max_connections: 100
+    timeout: 5
+  
+  # 会话管理
+  session:
+    store: "redis"
+    timeout: 3600
+    cookie_secure: true
+    cookie_httponly: true
+  
+  # 限流
+  rate_limit:
+    enabled: true
+    requests_per_second: 1000
+    burst: 2000
+  
+  # 熔断
+  circuit_breaker:
+    enabled: true
+    failure_threshold: 50
+    recovery_timeout: 30
+  
+  # 重试
+  retry:
+    enabled: true
+    max_attempts: 3
+    initial_interval: 1
+    max_interval: 5
+    multiplier: 2
+  
+  # 日志聚合
+  logging:
+    aggregation:
+      enabled: true
+      type: "elasticsearch"
+      url: "http://localhost:9200"
+      index_pattern: "hive-logs-%Y.%m.%d"
+  
+  # 指标收集
+  metrics:
+    collection:
+      enabled: true
+      type: "prometheus"
+      push_gateway: "http://localhost:9091"
+      interval: 15
+  
+  # 分布式追踪
+  tracing:
+    enabled: true
+    type: "jaeger"
+    agent_host: "localhost"
+    agent_port: 6831
+    sampling_rate: 0.1
+  
+  # 备份
+  backup:
+    enabled: true
+    type: "s3"
+    bucket: "hive-backups"
+    schedule: "0 0 * * *"  # 每天凌晨
+    retention_days: 30
+  
+  # 安全
+  security:
+    # WAF配置
+    waf:
+      enabled: true
+      rules_file: "/etc/hive/waf-rules.conf"
+      block_mode: true
+    
+    # DDoS防护
+    ddos_protection:
+      enabled: true
+      max_requests_per_ip: 1000
+      blacklist_threshold: 2000
+    
+    # IP白名单
+    ip_whitelist:
+      enabled: true
+      allowed_ips:
+        - "10.0.0.0/8"
+        - "172.16.0.0/12"
+        - "192.168.0.0/16" 

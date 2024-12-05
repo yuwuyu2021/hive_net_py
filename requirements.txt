@@ -1,0 +1,23 @@
+# Core Dependencies
+asyncio>=3.4.3
+aiohttp>=3.8.0
+sqlalchemy>=1.4.0
+cryptography>=3.4.7
+protobuf>=3.19.0
+pytest>=6.2.5
+PyQt6>=6.4.0
+pytest-asyncio>=0.21.0
+
+# Development Tools
+black>=21.9b0
+flake8>=3.9.2
+mypy>=0.950
+pytest-cov>=3.0.0
+
+# Visualization
+plotly>=5.3.1
+kaleido==0.2.1
+pyqtgraph>=0.13.1
+
+# System Monitoring
+psutil>=5.8.0

@@ -1,0 +1,71 @@
+# 基础配置模板
+
+# 网络配置
+network:
+  host: "{{ network_host | default('127.0.0.1') }}"
+  port: {{ network_port | default(8080) }}
+  max_connections: {{ network_max_connections | default(1000) }}
+  timeout: {{ network_timeout | default(30) }}
+  keep_alive: {{ network_keep_alive | default(true) }}
+
+# 日志配置
+logging:
+  level: "{{ log_level | default('INFO') }}"
+  format: "{{ log_format | default('%(asctime)s - %(name)s - %(levelname)s - %(message)s') }}"
+  file: "logs/{{ app_name | default('app') }}.log"
+  max_size: {{ log_max_size | default(10485760) }}  # 10MB
+  backup_count: {{ log_backup_count | default(5) }}
+
+# 安全配置
+security:
+  enable_ssl: {{ security_enable_ssl | default(false) }}
+  cert_file: "{{ security_cert_file | default('certs/server.crt') }}"
+  key_file: "{{ security_key_file | default('certs/server.key') }}"
+  auth_required: {{ security_auth_required | default(true) }}
+  token_expire: {{ security_token_expire | default(3600) }}
+
+# 性能配置
+performance:
+  thread_pool: {{ performance_thread_pool | default(10) }}
+  process_pool: {{ performance_process_pool | default(4) }}
+  batch_size: {{ performance_batch_size | default(100) }}
+  queue_size: {{ performance_queue_size | default(1000) }}
+  enable_compression: {{ performance_enable_compression | default(true) }}
+
+# 存储配置
+storage:
+  type: "{{ storage_type | default('sqlite') }}"
+  path: "{{ storage_path | default('data/app.db') }}"
+  backup_enabled: {{ storage_backup_enabled | default(true) }}
+  backup_interval: {{ storage_backup_interval | default(86400) }}  # 24小时
+  max_backup_count: {{ storage_max_backup_count | default(7) }}
+
+# 监控配置
+monitoring:
+  enabled: {{ monitoring_enabled | default(true) }}
+  interval: {{ monitoring_interval | default(60) }}
+  metrics:
+    {% for metric in monitoring_metrics | default(['cpu_usage', 'memory_usage', 'disk_usage', 'network_io']) %}
+    - {{ metric }}
+    {% endfor %}
+  alert:
+    enabled: {{ monitoring_alert_enabled | default(true) }}
+    thresholds:
+      cpu_usage: {{ monitoring_threshold_cpu | default(80) }}
+      memory_usage: {{ monitoring_threshold_memory | default(80) }}
+      disk_usage: {{ monitoring_threshold_disk | default(90) }}
+    handlers:
+      {% if monitoring_email_enabled | default(true) %}
+      - type: "email"
+        recipients: {{ monitoring_email_recipients | default(['admin@example.com']) }}
+      {% endif %}
+      {% if monitoring_wechat_enabled | default(false) %}
+      - type: "wechat"
+        webhook: "{{ monitoring_wechat_webhook }}"
+      {% endif %}
+
+# 开发配置
+development:
+  debug: {{ development_debug | default(false) }}
+  mock_enabled: {{ development_mock_enabled | default(false) }}
+  profile_enabled: {{ development_profile_enabled | default(false) }} 

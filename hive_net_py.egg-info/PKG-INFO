@@ -1,0 +1,6 @@
+Metadata-Version: 2.1
+Name: hive_net_py
+Version: 0.1.0
+Summary: A Python-based distributed network system
+Requires-Python: >=3.6
+Requires-Dist: dataclasses; python_version < "3.7"

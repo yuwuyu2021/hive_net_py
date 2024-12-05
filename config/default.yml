@@ -1,0 +1,76 @@
+# HiveNet默认配置文件
+
+# 网络配置
+network:
+  host: "127.0.0.1"
+  port: 8080
+  max_connections: 1000
+  timeout: 30
+  keep_alive: true
+
+# 日志配置
+logging:
+  level: "INFO"
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+  file: "logs/hive.log"
+  max_size: 10485760  # 10MB
+  backup_count: 5
+
+# 安全配置
+security:
+  enable_ssl: false
+  cert_file: "certs/server.crt"
+  key_file: "certs/server.key"
+  auth_required: true
+  token_expire: 3600
+
+# 性能配置
+performance:
+  thread_pool: 10
+  process_pool: 4
+  batch_size: 100
+  queue_size: 1000
+  enable_compression: true
+
+# 存储配置
+storage:
+  type: "sqlite"
+  path: "data/hive.db"
+  backup_enabled: true
+  backup_interval: 86400  # 24小时
+  max_backup_count: 7
+
+# 监控配置
+monitoring:
+  enabled: true
+  interval: 60
+  metrics:
+    - cpu_usage
+    - memory_usage
+    - disk_usage
+    - network_io
+  alert:
+    enabled: true
+    thresholds:
+      cpu_usage: 80
+      memory_usage: 80
+      disk_usage: 90
+    handlers:
+      - type: "email"
+        recipients: ["admin@example.com"]
+      - type: "wechat"
+        webhook: "https://qyapi.weixin.qq.com/cgi-bin/webhook/send?key=YOUR_KEY"
+
+# 客户端配置
+client:
+  auto_reconnect: true
+  reconnect_interval: 5
+  max_retry: 3
+  compression: true
+  buffer_size: 8192
+
+# 开发配置
+development:
+  debug: false
+  mock_enabled: false
+  profile_enabled: false 

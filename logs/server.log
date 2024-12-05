@@ -1,0 +1,82 @@
+2024-12-05 21:55:50,384 - hive_net_py.server.core.monitor - INFO - 性能监控已启动
+2024-12-05 21:56:18,019 - hive_net_py.server.core.session - INFO - 会话管理器已启动
+2024-12-05 21:56:18,059 - hive_net_py.server.core.server - INFO - 服务器启动于 0.0.0.0:8080
+2024-12-05 21:56:27,209 - hive_net_py.server.core.session - INFO - 会话管理器已停止
+2024-12-05 21:56:27,209 - hive_net_py.server.core.server - INFO - 服务器已停止
+2024-12-05 21:56:38,431 - hive_net_py.server.core.monitor - INFO - 性能监控已停止
+2024-12-05 21:58:49,727 - hive_net_py.server.core.monitor - INFO - 性能监控已启动
+2024-12-05 21:58:51,132 - hive_net_py.server.core.session - INFO - 会话管理器已启动
+2024-12-05 21:58:51,171 - hive_net_py.server.core.server - INFO - 服务器启动于 0.0.0.0:8080
+2024-12-05 21:59:39,212 - hive_net_py.server.core.session - INFO - 会话管理器已停止
+2024-12-05 21:59:39,212 - hive_net_py.server.core.server - INFO - 服务器已停止
+2024-12-05 22:00:20,591 - hive_net_py.server.core.session - INFO - 会话管理器已启动
+2024-12-05 22:00:20,696 - hive_net_py.server.core.server - INFO - 服务器启动于 0.0.0.0:8080
+2024-12-05 22:03:12,355 - hive_net_py.server.core.session - INFO - 会话管理器已停止
+2024-12-05 22:03:12,355 - hive_net_py.server.core.server - INFO - 服务器已停止
+2024-12-05 22:03:13,348 - hive_net_py.server.core.monitor - INFO - 性能监控已停止
+2024-12-05 22:03:19,698 - hive_net_py.server.core.monitor - INFO - 性能监控已启动
+2024-12-05 22:03:21,989 - hive_net_py.server.core.session - INFO - 会话管理器已启动
+2024-12-05 22:03:22,029 - hive_net_py.server.core.server - INFO - 服务器启动于 0.0.0.0:8080
+2024-12-05 22:06:36,401 - hive_net_py.server.core.monitor - INFO - 性能监控已启动
+2024-12-05 22:06:36,402 - hive_net_py.server.core.session - INFO - 会话管理器已启动
+2024-12-05 22:06:36,402 - __main__ - ERROR - 服务器运行出错: HiveServer.__init__() got an unexpected keyword argument 'session_manager'
+2024-12-05 22:07:08,951 - hive_net_py.server.core.monitor - INFO - 性能监控已启动
+2024-12-05 22:07:08,952 - hive_net_py.server.core.session - INFO - 会话管理器已启动
+2024-12-05 22:07:08,952 - __main__ - ERROR - 服务器运行出错: 'HiveServer' object has no attribute 'set_session_manager'
+2024-12-05 22:08:52,233 - hive_net_py.server.core.monitor - INFO - 性能监控已启动
+2024-12-05 22:08:52,234 - hive_net_py.server.core.session - INFO - 会话管理器已启动
+2024-12-05 22:08:52,234 - hive_net_py.server.core.session - INFO - 会话管理器已启动
+2024-12-05 22:08:52,325 - hive_net_py.server.core.server - INFO - 服务器启动于 0.0.0.0:8080
+2024-12-05 22:19:36,434 - hive_net_py.server.core.monitor - INFO - 性能监控已启动
+2024-12-05 22:19:36,434 - hive_net_py.server.core.session - INFO - 会话管理器已启动
+2024-12-05 22:19:36,434 - hive_net_py.server.core.session - INFO - 会话管理器已启动
+2024-12-05 22:19:36,522 - hive_net_py.server.core.server - ERROR - 服务器启动失败: Task <Task pending name='Task-2' coro=<MainWindow._init_server() running at D:\Cursor\hive_net_py\hive_net_py\server\gui\main_window.py:132>> got Future <_GatheringFuture pending> attached to a different loop
+2024-12-05 22:19:36,528 - qasync._QEventLoop - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-2' coro=<MainWindow._init_server() done, defined at D:\Cursor\hive_net_py\hive_net_py\server\gui\main_window.py:117> exception=RuntimeError("Task <Task pending name='Task-2' coro=<MainWindow._init_server() running at D:\\Cursor\\hive_net_py\\hive_net_py\\server\\gui\\main_window.py:132>> got Future <_GatheringFuture pending> attached to a different loop")>
+Traceback (most recent call last):
+  File "D:\Cursor\hive_net_py\hive_net_py\server\gui\main_window.py", line 132, in _init_server
+    await self.server.start()
+  File "D:\Cursor\hive_net_py\hive_net_py\server\core\server.py", line 181, in start
+    self.server = await asyncio.start_server(
+  File "C:\Users\yuwuy\AppData\Local\Programs\Python\Python310\lib\asyncio\streams.py", line 85, in start_server
+    return await loop.create_server(factory, host, port, **kwds)
+  File "C:\Users\yuwuy\AppData\Local\Programs\Python\Python310\lib\asyncio\base_events.py", line 1479, in create_server
+    infos = await tasks.gather(*fs)
+RuntimeError: Task <Task pending name='Task-2' coro=<MainWindow._init_server() running at D:\Cursor\hive_net_py\hive_net_py\server\gui\main_window.py:132>> got Future <_GatheringFuture pending> attached to a different loop
+2024-12-05 22:19:55,383 - hive_net_py.server.core.monitor - INFO - 性能监控已启动
+2024-12-05 22:19:55,384 - hive_net_py.server.core.session - INFO - 会话管理器已启动
+2024-12-05 22:19:55,384 - hive_net_py.server.core.session - INFO - 会话管理器已启动
+2024-12-05 22:19:55,464 - hive_net_py.server.core.server - ERROR - 服务器启动失败: Task <Task pending name='Task-7' coro=<MainWindow._init_server() running at D:\Cursor\hive_net_py\hive_net_py\server\gui\main_window.py:132>> got Future <_GatheringFuture pending> attached to a different loop
+2024-12-05 22:19:55,466 - qasync._QEventLoop - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-7' coro=<MainWindow._init_server() done, defined at D:\Cursor\hive_net_py\hive_net_py\server\gui\main_window.py:117> exception=RuntimeError("Task <Task pending name='Task-7' coro=<MainWindow._init_server() running at D:\\Cursor\\hive_net_py\\hive_net_py\\server\\gui\\main_window.py:132>> got Future <_GatheringFuture pending> attached to a different loop")>
+Traceback (most recent call last):
+  File "D:\Cursor\hive_net_py\hive_net_py\server\gui\main_window.py", line 132, in _init_server
+    await self.server.start()
+  File "D:\Cursor\hive_net_py\hive_net_py\server\core\server.py", line 181, in start
+    self.server = await asyncio.start_server(
+  File "C:\Users\yuwuy\AppData\Local\Programs\Python\Python310\lib\asyncio\streams.py", line 85, in start_server
+    return await loop.create_server(factory, host, port, **kwds)
+  File "C:\Users\yuwuy\AppData\Local\Programs\Python\Python310\lib\asyncio\base_events.py", line 1479, in create_server
+    infos = await tasks.gather(*fs)
+RuntimeError: Task <Task pending name='Task-7' coro=<MainWindow._init_server() running at D:\Cursor\hive_net_py\hive_net_py\server\gui\main_window.py:132>> got Future <_GatheringFuture pending> attached to a different loop
+2024-12-05 22:20:02,894 - __main__ - ERROR - GUI启动失败: object int can't be used in 'await' expression
+2024-12-05 22:22:33,860 - hive_net_py.server.core.monitor - INFO - 性能监控已启动
+2024-12-05 22:22:33,860 - hive_net_py.server.core.session - INFO - 会话管理器已启动
+2024-12-05 22:22:33,860 - hive_net_py.server.core.session - INFO - 会话管理器已启动
+2024-12-05 22:22:33,941 - hive_net_py.server.core.server - ERROR - 服务器启动失败: [Errno 10048] error while attempting to bind on address ('0.0.0.0', 8080): 通常每个套接字地址(协议/网络地址/端口)只允许使用一次。
+2024-12-05 22:23:08,675 - hive_net_py.server.core.monitor - INFO - 性能监控已启动
+2024-12-05 22:23:08,676 - hive_net_py.server.core.session - INFO - 会话管理器已启动
+2024-12-05 22:23:08,676 - hive_net_py.server.core.session - INFO - 会话管理器已启动
+2024-12-05 22:23:08,757 - hive_net_py.server.core.server - ERROR - 服务器启动失败: [Errno 10048] error while attempting to bind on address ('0.0.0.0', 8080): 通常每个套接字地址(协议/网络地址/端口)只允许使用一次。
+2024-12-05 22:23:37,921 - hive_net_py.server.core.monitor - INFO - 性能监控已启动
+2024-12-05 22:23:37,921 - hive_net_py.server.core.session - INFO - 会话管理器已启动
+2024-12-05 22:23:37,922 - hive_net_py.server.core.session - INFO - 会话管理器已启动
+2024-12-05 22:23:37,999 - hive_net_py.server.core.server - INFO - 服务器启动于 0.0.0.0:8081
+2024-12-05 22:26:19,738 - hive_net_py.server.core.monitor - INFO - 性能监控已启动
+2024-12-05 22:26:19,738 - hive_net_py.server.core.session - INFO - 会话管理器已启动
+2024-12-05 22:26:19,738 - hive_net_py.server.core.session - INFO - 会话管理器已启动
+2024-12-05 22:26:19,819 - hive_net_py.server.core.server - INFO - 服务器启动于 0.0.0.0:8081
+2024-12-05 22:31:10,938 - hive_net_py.server.core.session - INFO - 会话管理器已停止
+2024-12-05 22:31:10,938 - hive_net_py.server.core.server - INFO - 服务器已停止
+2024-12-05 22:31:10,938 - hive_net_py.server.core.session - INFO - 会话管理器已停止
+2024-12-05 22:31:10,938 - hive_net_py.server.core.monitor - INFO - 性能监控已停止

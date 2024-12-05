@@ -1,0 +1,63 @@
+2024-12-05 22:03:43,601 - __main__ - INFO - 开始压力测试 - 目标: 50 个客户端
+2024-12-05 22:03:43,601 - __main__ - INFO - 创建第 1 到 5 个客户端
+2024-12-05 22:03:43,602 - hive_net_py.client.core.message_queue - INFO - 消息队列已启动
+2024-12-05 22:03:43,602 - hive_net_py.client.core.message_queue - INFO - 消息队列已启动
+2024-12-05 22:03:43,603 - hive_net_py.client.core.message_queue - INFO - 消息队列已启动
+2024-12-05 22:03:43,603 - hive_net_py.client.core.message_queue - INFO - 消息队列已启动
+2024-12-05 22:03:43,603 - hive_net_py.client.core.message_queue - INFO - 消息队列已启动
+2024-12-05 22:03:43,611 - __main__ - INFO - 创建第 6 到 10 个客户端
+2024-12-05 22:03:43,612 - hive_net_py.client.core.message_queue - INFO - 消息队列已启动
+2024-12-05 22:03:43,612 - hive_net_py.client.core.message_queue - INFO - 消息队列已启动
+2024-12-05 22:03:43,613 - hive_net_py.client.core.message_queue - INFO - 消息队列已启动
+2024-12-05 22:03:43,614 - hive_net_py.client.core.message_queue - INFO - 消息队列已启动
+2024-12-05 22:03:43,614 - hive_net_py.client.core.message_queue - INFO - 消息队列已启动
+2024-12-05 22:03:43,614 - __main__ - INFO - 创建第 11 到 15 个客户端
+2024-12-05 22:03:43,614 - hive_net_py.client.core.message_queue - INFO - 消息队列已启动
+2024-12-05 22:03:43,615 - hive_net_py.client.core.message_queue - INFO - 消息队列已启动
+2024-12-05 22:03:43,616 - hive_net_py.client.core.message_queue - INFO - 消息队列已启动
+2024-12-05 22:03:43,616 - hive_net_py.client.core.message_queue - INFO - 消息队列已启动
+2024-12-05 22:03:43,617 - hive_net_py.client.core.message_queue - INFO - 消息队列已启动
+2024-12-05 22:03:43,618 - __main__ - INFO - 创建第 16 到 20 个客户端
+2024-12-05 22:03:43,618 - hive_net_py.client.core.message_queue - INFO - 消息队列已启动
+2024-12-05 22:03:43,619 - hive_net_py.client.core.message_queue - INFO - 消息队列已启动
+2024-12-05 22:03:43,619 - hive_net_py.client.core.message_queue - INFO - 消息队列已启动
+2024-12-05 22:03:43,620 - hive_net_py.client.core.message_queue - INFO - 消息队列已启动
+2024-12-05 22:03:43,620 - hive_net_py.client.core.message_queue - INFO - 消息队列已启动
+2024-12-05 22:03:43,621 - __main__ - INFO - 创建第 21 到 25 个客户端
+2024-12-05 22:03:43,621 - hive_net_py.client.core.message_queue - INFO - 消息队列已启动
+2024-12-05 22:03:43,622 - hive_net_py.client.core.message_queue - INFO - 消息队列已启动
+2024-12-05 22:03:43,622 - hive_net_py.client.core.message_queue - INFO - 消息队列已启动
+2024-12-05 22:03:43,622 - hive_net_py.client.core.message_queue - INFO - 消息队列已启动
+2024-12-05 22:03:43,622 - hive_net_py.client.core.message_queue - INFO - 消息队列已启动
+2024-12-05 22:03:43,623 - __main__ - INFO - 创建第 26 到 30 个客户端
+2024-12-05 22:03:43,623 - hive_net_py.client.core.message_queue - INFO - 消息队列已启动
+2024-12-05 22:03:43,624 - hive_net_py.client.core.message_queue - INFO - 消息队列已启动
+2024-12-05 22:03:43,624 - hive_net_py.client.core.message_queue - INFO - 消息队列已启动
+2024-12-05 22:03:43,624 - hive_net_py.client.core.message_queue - INFO - 消息队列已启动
+2024-12-05 22:03:43,624 - hive_net_py.client.core.message_queue - INFO - 消息队列已启动
+2024-12-05 22:03:43,625 - __main__ - INFO - 创建第 31 到 35 个客户端
+2024-12-05 22:03:43,625 - hive_net_py.client.core.message_queue - INFO - 消息队列已启动
+2024-12-05 22:03:43,626 - hive_net_py.client.core.message_queue - INFO - 消息队列已启动
+2024-12-05 22:03:43,626 - hive_net_py.client.core.message_queue - INFO - 消息队列已启动
+2024-12-05 22:03:43,626 - hive_net_py.client.core.message_queue - INFO - 消息队列已启动
+2024-12-05 22:03:43,627 - hive_net_py.client.core.message_queue - INFO - 消息队列已启动
+2024-12-05 22:03:43,627 - __main__ - INFO - 创建第 36 到 40 个客户端
+2024-12-05 22:03:43,628 - hive_net_py.client.core.message_queue - INFO - 消息队列已启动
+2024-12-05 22:03:43,628 - hive_net_py.client.core.message_queue - INFO - 消息队列已启动
+2024-12-05 22:03:43,628 - hive_net_py.client.core.message_queue - INFO - 消息队列已启动
+2024-12-05 22:03:43,629 - hive_net_py.client.core.message_queue - INFO - 消息队列已启动
+2024-12-05 22:03:43,629 - hive_net_py.client.core.message_queue - INFO - 消息队列已启动
+2024-12-05 22:03:43,630 - __main__ - INFO - 创建第 41 到 45 个客户端
+2024-12-05 22:03:43,630 - hive_net_py.client.core.message_queue - INFO - 消息队列已启动
+2024-12-05 22:03:43,630 - hive_net_py.client.core.message_queue - INFO - 消息队列已启动
+2024-12-05 22:03:43,631 - hive_net_py.client.core.message_queue - INFO - 消息队列已启动
+2024-12-05 22:03:43,631 - hive_net_py.client.core.message_queue - INFO - 消息队列已启动
+2024-12-05 22:03:43,632 - hive_net_py.client.core.message_queue - INFO - 消息队列已启动
+2024-12-05 22:03:43,633 - __main__ - INFO - 创建第 46 到 50 个客户端
+2024-12-05 22:03:43,634 - hive_net_py.client.core.message_queue - INFO - 消息队列已启动
+2024-12-05 22:03:43,634 - hive_net_py.client.core.message_queue - INFO - 消息队列已启动
+2024-12-05 22:03:43,634 - hive_net_py.client.core.message_queue - INFO - 消息队列已启动
+2024-12-05 22:03:43,635 - hive_net_py.client.core.message_queue - INFO - 消息队列已启动
+2024-12-05 22:03:43,636 - hive_net_py.client.core.message_queue - INFO - 消息队列已启动
+2024-12-05 22:03:43,636 - __main__ - INFO - 所有客户端创建完成，开始发送测试消息
+2024-12-05 22:04:13,880 - __main__ - ERROR - 测试失败: name 'tasks' is not defined
